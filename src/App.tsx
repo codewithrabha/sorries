@@ -40,11 +40,13 @@ const S = [
   "I love you more than you'll ever know."
 ];
 
+const ASSET_BASE = `${import.meta.env.BASE_URL}assets/`;
+
 const FN = [
-  { id: "1", url: "/assets/rose-bouquet-CmX6kWyv.png", rotation: -4, caption: "Moments of Joy" },
-  { id: "2", url: "/assets/cute-cat-sorry-CnLo6c4o.gif", rotation: 3, caption: "Beautiful Memories" },
-  { id: "3", url: "/assets/crying-cat-CkSEnu3R.png", rotation: -2, caption: "Our Happy Place" },
-  { id: "4", url: "/assets/rose-bouquet-CmX6kWyv.png", rotation: 5, caption: "Forever Together" }
+  { id: "1", url: `${ASSET_BASE}rose-bouquet-CmX6kWyv.png`, rotation: -4, caption: "Moments of Joy" },
+  { id: "2", url: `${ASSET_BASE}cute-cat-sorry-CnLo6c4o.gif`, rotation: 3, caption: "Beautiful Memories" },
+  { id: "3", url: `${ASSET_BASE}crying-cat-CkSEnu3R.png`, rotation: -2, caption: "Our Happy Place" },
+  { id: "4", url: `${ASSET_BASE}rose-bouquet-CmX6kWyv.png`, rotation: 5, caption: "Forever Together" }
 ];
 
 function Memories() {
@@ -153,7 +155,7 @@ export default function App() {
 
   return (
     <div className="bg-background min-h-screen font-sans text-foreground overflow-x-hidden relative">
-      <audio ref={audioRef} src="/assets/background-music.mp3" autoPlay loop />
+      <audio ref={audioRef} src={`${ASSET_BASE}background-music.mp3`} autoPlay loop />
 
       <button
         onClick={toggleAudio}
@@ -173,7 +175,7 @@ export default function App() {
             <motion.div className="relative z-10 text-center max-w-2xl mx-auto px-4" variants={containerVariants} initial="initial" animate="animate">
               <div className="mb-8">
                 <motion.img
-                  src={isMad ? "/assets/crying-cat-CkSEnu3R.png" : "/assets/cute-cat-sorry-CnLo6c4o.gif"}
+                  src={isMad ? `${ASSET_BASE}crying-cat-CkSEnu3R.png` : `${ASSET_BASE}cute-cat-sorry-CnLo6c4o.gif`}
                   alt="Sorry cat"
                   className="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 mx-auto mb-6 sm:mb-8 rounded-2xl object-cover shadow-lg"
                   variants={itemVariants}
@@ -265,7 +267,7 @@ export default function App() {
               {showSurprise ? (
                 <>
                   <motion.div className="relative mx-auto mb-4 sm:mb-6 w-44 sm:w-56 md:w-64 lg:w-72 rounded-2xl overflow-hidden bg-transparent" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ type: "spring", bounce: 0.4 }}>
-                    <video src="/assets/bunny-bear-gift-D-FynrUA.mp4" autoPlay loop muted playsInline className="w-full h-auto " />
+                    <video src={`${ASSET_BASE}bunny-bear-gift-D-FynrUA.mp4`} autoPlay loop muted playsInline className="w-full h-auto " />
                   </motion.div>
                   <motion.h2 className="font-script text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-3 sm:mb-4" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ type: "spring", bounce: 0.5 }}>
                     Thank you, Suku.
