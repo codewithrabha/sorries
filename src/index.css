@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-background: hsl(260, 30%, 97%);
+  --color-foreground: hsl(260, 20%, 20%);
+  --color-card: hsl(0, 0%, 100%);
+  --color-card-foreground: hsl(260, 20%, 20%);
+  --color-popover: hsl(0, 0%, 100%);
+  --color-popover-foreground: hsl(260, 20%, 20%);
+  --color-primary: hsl(270, 50%, 65%);
+  --color-primary-foreground: hsl(0, 0%, 100%);
+  --color-secondary: hsl(270, 25%, 93%);
+  --color-secondary-foreground: hsl(260, 20%, 20%);
+  --color-muted: hsl(260, 15%, 93%);
+  --color-muted-foreground: hsl(260, 15%, 45%);
+  --color-accent: hsl(270, 30%, 90%);
+  --color-accent-foreground: hsl(260, 20%, 20%);
+  --color-destructive: hsl(0, 84%, 60%);
+  --color-destructive-foreground: hsl(210, 40%, 98%);
+  --color-border: hsl(270, 15%, 87%);
+  --color-input: hsl(270, 15%, 87%);
+  --color-ring: hsl(270, 50%, 65%);
+
+  --color-cream: hsl(270, 20%, 97%);
+  --color-blush: hsl(270, 35%, 93%);
+  --color-rose: hsl(270, 50%, 65%);
+  --color-rose-deep: hsl(270, 45%, 50%);
+  --color-wine: hsl(270, 30%, 35%);
+  --color-pink-soft: hsl(270, 40%, 96%);
+  --color-heart-pink: hsl(270, 50%, 72%);
+  --color-lavender: hsl(270, 35%, 92%);
+  --color-sky: hsl(240, 40%, 94%);
+
+  --font-script: "Dancing Script", cursive;
+  --font-sans: "Quicksand", sans-serif;
+
+  --shadow-soft: 0 4px 20px hsla(270, 25%, 80%, 0.15);
+  --shadow-glow: 0 0 25px hsla(270, 50%, 65%, 0.2);
+  --radius: 1rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
+
+.floral-border {
+  position: relative;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 40px 10px;
+  box-shadow: var(--shadow-soft);
+  border-radius: 4px;
+}
+
